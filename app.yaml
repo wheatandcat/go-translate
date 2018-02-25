@@ -1,0 +1,16 @@
+service: backend
+runtime: go
+env: standard
+threadsafe: true
+api_version: go1.8
+
+handlers:
+- url: /graphql
+  script: _go_app
+
+nobuild_files:
+- vendor/
+
+skip_files:
+- vendor/
+- lib/
